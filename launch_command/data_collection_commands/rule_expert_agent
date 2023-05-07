@@ -1,0 +1,11 @@
+# collect data
+python src/data_collection/highway/rule_expert.py
+python src/data_collection/intersection/rule_expert.py
+python src/data_collection/roundabout/rule_expert.py
+
+# only visualize
+python src/data_collection/highway/rule_expert_visualization.py
+python src/data_collection/intersection/rule_expert_visualization.py
+python src/data_collection/roundabout/rule_expert_visualization.py
+
+The difference bewteen rule_expert.py and rule_expert_visualization.py is that 1) rule_expert.py collects data using MetadriveRuleExpertEvaluator, and turn off the use_render to disenable visualization; 2) rule_expert_visualization.py only display visualization by using MetadriveEvaluator and turn on the use_render

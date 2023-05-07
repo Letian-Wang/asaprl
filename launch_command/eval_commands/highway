@@ -1,0 +1,32 @@
+# ASAP (ours)
+python src/evaluation/highway/skill.py --exp_name 'saved_model/taecrl++fixed10_1226_RV27_lat5_highway_PretrainRLSigma1_2000critic5000_seed1' --ckpt_file ckpt/iteration_70000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
+
+python src/evaluation/highway/skill.py --exp_name 'saved_model/ASPA_PretrainActor_PretrainCritic_fixed10_RV27_lat5_highway_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
+python src/evaluation/highway/skill.py --exp_name 'saved_model/ASPA_PretrainActor_PretrainCritic_fixed10_RV27_lat5_highway_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
+python src/evaluation/highway/skill.py --exp_name 'saved_model/ASPA_PretrainActor_PretrainCritic_fixed10_RV27_lat5_highway_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
+
+# SPIRL
+python src/evaluation/highway/skill.py --exp_name 'saved_model/SPIRL_fixed10_RV27_highway_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --reward_version 27 --DECODER_LOAD_DIR 'pretrain_ckpt_files/SPIRL_network/decoder_ckpt_highway' 
+python src/evaluation/highway/skill.py --exp_name 'saved_model/SPIRL_fixed10_RV27_highway_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --reward_version 27 --DECODER_LOAD_DIR 'pretrain_ckpt_files/SPIRL_network/decoder_ckpt_highway' 
+python src/evaluation/highway/skill.py --exp_name 'saved_model/SPIRL_fixed10_RV27_highway_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --reward_version 27 --DECODER_LOAD_DIR 'pretrain_ckpt_files/SPIRL_network/decoder_ckpt_highway' 
+
+# taecrl highway
+python src/evaluation/highway/skill.py --exp_name 'saved_model/taecrl_RV27_highway_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --DECODER_LOAD_DIR 'pretrain_ckpt_files/taecrl_network/99_decoder_ckpt_len10_dim5' --reward_version 27
+python src/evaluation/highway/skill.py --exp_name 'saved_model/taecrl_RV27_highway_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --DECODER_LOAD_DIR 'pretrain_ckpt_files/taecrl_network/99_decoder_ckpt_len10_dim5' --reward_version 27
+python src/evaluation/highway/skill.py --exp_name 'saved_model/taecrl_RV27_highway_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --DECODER_LOAD_DIR 'pretrain_ckpt_files/taecrl_network/99_decoder_ckpt_len10_dim5' --reward_version 27
+
+# constant sac
+python src/evaluation/highway/const_sac.py --exp_name 'saved_model/const_sac_rv27_highway_sparse_seed1' --ckpt_file ckpt/iteration_50000.pth.tar
+python src/evaluation/highway/const_sac.py --exp_name 'saved_model/const_sac_rv27_highway_sparse_seed2' --ckpt_file ckpt/iteration_50000.pth.tar
+python src/evaluation/highway/const_sac.py --exp_name 'saved_model/const_sac_rv27_highway_sparse_seed3' --ckpt_file ckpt/iteration_50000.pth.tar
+
+# ppo
+python src/evaluation/highway/ppo.py --exp_name 'saved_model/ppo_highway_RV27_sparse_seed1' --ckpt_file ckpt/iteration_50000.pth.tar
+python src/evaluation/highway/ppo.py --exp_name 'saved_model/ppo_highway_RV27_sparse_seed2' --ckpt_file ckpt/iteration_50000.pth.tar
+python src/evaluation/highway/ppo.py --exp_name 'saved_model/ppo_highway_RV27_sparse_seed3' --ckpt_file ckpt/iteration_50000.pth.tar
+
+# sac
+python src/evaluation/highway/sac.py --exp_name 'saved_model/sac_highway_RV27_sparse_seed1' --ckpt_file ckpt/iteration_50000.pth.tar
+python src/evaluation/highway/sac.py --exp_name 'saved_model/sac_highway_RV27_sparse_seed2' --ckpt_file ckpt/iteration_50000.pth.tar
+python src/evaluation/highway/sac.py --exp_name 'saved_model/sac_highway_RV27_sparse_seed3' --ckpt_file ckpt/iteration_50000.pth.tar
+       

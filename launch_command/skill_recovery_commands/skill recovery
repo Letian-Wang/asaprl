@@ -1,0 +1,8 @@
+# highway
+python src/skill_recovery_and_prior_training/main_skill_recovery.py --scenario highway
+# intersection
+python src/skill_recovery_and_prior_training/main_skill_recovery.py --scenario intersection
+# roundabout
+python src/skill_recovery_and_prior_training/main_skill_recovery.py --scenario roundabout
+
+

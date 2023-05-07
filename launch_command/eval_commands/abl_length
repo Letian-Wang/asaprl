@@ -1,0 +1,70 @@
+# 1
+    # highway skill
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len1_highway_seed6' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 1 --reward_version 27 --lat_range 5
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len1_highway_seed7' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 1 --reward_version 27 --lat_range 5
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len1_highway_seed8' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 1 --reward_version 27 --lat_range 5
+    # intersection skill
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len1_intersection_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 1 --reward_version 27 --lat_range 5
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len1_intersection_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 1 --reward_version 27 --lat_range 5
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len1_intersection_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 1 --reward_version 27 --lat_range 5
+    # roundabout skill
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len1_roundabout_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 1 --reward_version 27 --lat_range 5
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len1_roundabout_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 1 --reward_version 27 --lat_range 5
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len1_roundabout_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 1 --reward_version 27 --lat_range 5
+
+# 3
+    # highway skill
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len3_highway_seed6' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 3 --reward_version 27 --lat_range 5
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len3_highway_seed7' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 3 --reward_version 27 --lat_range 5
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len3_highway_seed8' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 3 --reward_version 27 --lat_range 5
+    # intersection skill
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len3_intersection_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 3 --reward_version 27 --lat_range 5
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len3_intersection_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 3 --reward_version 27 --lat_range 5
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len3_intersection_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 3 --reward_version 27 --lat_range 5
+    # roundabout skill
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len3_roundabout_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 3 --reward_version 27 --lat_range 5
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len3_roundabout_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 3 --reward_version 27 --lat_range 5
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len3_roundabout_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 3 --reward_version 27 --lat_range 5
+
+# 5
+    # highway skill
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len5_highway_seed6' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 5 --reward_version 27 --lat_range 5
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len5_highway_seed7' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 5 --reward_version 27 --lat_range 5
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len5_highway_seed8' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 5 --reward_version 27 --lat_range 5
+    # intersection skill
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len5_intersection_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 5 --reward_version 27 --lat_range 5
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len5_intersection_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 5 --reward_version 27 --lat_range 5
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len5_intersection_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 5 --reward_version 27 --lat_range 5
+    # roundabout skill
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len5_roundabout_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 5 --reward_version 27 --lat_range 5
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len5_roundabout_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 5 --reward_version 27 --lat_range 5
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len5_roundabout_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 5 --reward_version 27 --lat_range 5
+
+# 15
+    # highway skill
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len15_highway_seed6' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 15 --reward_version 27 --lat_range 5
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len15_highway_seed7' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 15 --reward_version 27 --lat_range 5
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len15_highway_seed8' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 15 --reward_version 27 --lat_range 5
+    # intersection skill
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len15_intersection_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 15 --reward_version 27 --lat_range 5
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len15_intersection_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 15 --reward_version 27 --lat_range 5
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len15_intersection_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 15 --reward_version 27 --lat_range 5
+    # roundabout skill
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len15_roundabout_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 15 --reward_version 27 --lat_range 5
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len15_roundabout_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 15 --reward_version 27 --lat_range 5
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len15_roundabout_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 15 --reward_version 27 --lat_range 5
+
+# 20
+    # highway skill
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len20_highway_seed6' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 20 --reward_version 27 --lat_range 5
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len20_highway_seed7' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 20 --reward_version 27 --lat_range 5
+    python src/evaluation/highway/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len20_highway_seed8' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 20 --reward_version 27 --lat_range 5
+    # intersection skill
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len20_intersection_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 20 --reward_version 27 --lat_range 5
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len20_intersection_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 20 --reward_version 27 --lat_range 5
+    python src/evaluation/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len20_intersection_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 20 --reward_version 27 --lat_range 5
+    # roundabout skill
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len20_roundabout_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 20 --reward_version 27 --lat_range 5
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len20_roundabout_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 20 --reward_version 27 --lat_range 5
+    python src/evaluation/roundabout/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV27_lat5_len20_roundabout_seed3' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 20 --reward_version 27 --lat_range 5
+

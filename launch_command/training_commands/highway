@@ -1,0 +1,30 @@
+# ASAP (ours)
+python src/training/highway/skill.py --exp_name 'saved_model/ASPA_PretrainActor_PretrainCritic_fixed10_RV27_lat5_highway_seed1' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_highway --critic_pretraining True --CRITIC_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/critic_highway.pth.tar
+python src/training/highway/skill.py --exp_name 'saved_model/ASPA_PretrainActor_PretrainCritic_fixed10_RV27_lat5_highway_seed2' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_highway --critic_pretraining True --CRITIC_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/critic_highway.pth.tar
+python src/training/highway/skill.py --exp_name 'saved_model/ASPA_PretrainActor_PretrainCritic_fixed10_RV27_lat5_highway_seed3' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_highway --critic_pretraining True --CRITIC_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/critic_highway.pth.tar
+
+# SPIRL
+python src/training/highway/skill.py --exp_name 'saved_model/SPIRL_fixed10_RV27_highway_seed1' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --reward_version 27 --DECODER_LOAD_DIR 'pretrain_ckpt_files/SPIRL_network/decoder_ckpt_highway' --pretraining True --pretraining_iter 0 --prior_kl True --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/SPIRL_network/actor_ckpt_highway
+python src/training/highway/skill.py --exp_name 'saved_model/SPIRL_fixed10_RV27_highway_seed2' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --reward_version 27 --DECODER_LOAD_DIR 'pretrain_ckpt_files/SPIRL_network/decoder_ckpt_highway' --pretraining True --pretraining_iter 0 --prior_kl True --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/SPIRL_network/actor_ckpt_highway
+python src/training/highway/skill.py --exp_name 'saved_model/SPIRL_fixed10_RV27_highway_seed3' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --reward_version 27 --DECODER_LOAD_DIR 'pretrain_ckpt_files/SPIRL_network/decoder_ckpt_highway' --pretraining True --pretraining_iter 0 --prior_kl True --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/SPIRL_network/actor_ckpt_highway
+
+# taecrl highway
+python src/training/highway/skill.py --exp_name 'saved_model/taecrl_RV27_highway_seed1' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --DECODER_LOAD_DIR 'pretrain_ckpt_files/taecrl_network/99_decoder_ckpt_len10_dim5' --reward_version 27
+python src/training/highway/skill.py --exp_name 'saved_model/taecrl_RV27_highway_seed2' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --DECODER_LOAD_DIR 'pretrain_ckpt_files/taecrl_network/99_decoder_ckpt_len10_dim5' --reward_version 27
+python src/training/highway/skill.py --exp_name 'saved_model/taecrl_RV27_highway_seed3' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --DECODER_LOAD_DIR 'pretrain_ckpt_files/taecrl_network/99_decoder_ckpt_len10_dim5' --reward_version 27
+
+# constant sac
+python src/training/highway/const_sac.py --exp_name 'saved_model/const_sac_rv27_highway_sparse_seed1'
+python src/training/highway/const_sac.py --exp_name 'saved_model/const_sac_rv27_highway_sparse_seed2'
+python src/training/highway/const_sac.py --exp_name 'saved_model/const_sac_rv27_highway_sparse_seed3'
+
+# ppo
+python src/training/highway/ppo.py --exp_name 'saved_model/ppo_highway_RV27_sparse_seed1'
+python src/training/highway/ppo.py --exp_name 'saved_model/ppo_highway_RV27_sparse_seed2'
+python src/training/highway/ppo.py --exp_name 'saved_model/ppo_highway_RV27_sparse_seed3'
+
+# sac
+python src/training/highway/sac.py --exp_name 'saved_model/sac_highway_RV27_sparse_seed1'
+python src/training/highway/sac.py --exp_name 'saved_model/sac_highway_RV27_sparse_seed2'
+python src/training/highway/sac.py --exp_name 'saved_model/sac_highway_RV27_sparse_seed3'
+       

@@ -1,0 +1,16 @@
+# actor pretraining with recovered skill parameters
+  # highway
+  python src/skill_recovery_and_prior_training/main_actor_pretrain_annotated_data.py --exp_name 'pretrain_actor_highway' --learning_rate 0.001 --KL_weight 1
+  # intersection
+  python src/skill_recovery_and_prior_training/main_actor_pretrain_annotated_data.py --exp_name 'pretrain_actor_intersection' --learning_rate 0.001 --KL_weight 1 --scenario 'intersection'
+  # roundabout
+  python src/skill_recovery_and_prior_training/main_actor_pretrain_annotated_data.py --exp_name 'pretrain_actor_roundabout' --learning_rate 0.001 --KL_weight 1 --scenario 'roundabout'
+
+
+# actor pretraining with ground-truth skill parameters
+  # highway
+  python src/skill_recovery_and_prior_training/main_actor_pretrain_gt_data.py --exp_name 'pretrain_actor_highway_gt_skill' --learning_rate 0.001 --KL_weight 1
+  # intersection
+  python src/skill_recovery_and_prior_training/main_actor_pretrain_gt_data.py --exp_name 'pretrain_actor_intersection_gt_skill' --learning_rate 0.001 --KL_weight 1 --scenario 'intersection'
+  # roundabout
+  python src/skill_recovery_and_prior_training/main_actor_pretrain_gt_data.py --exp_name 'pretrain_actor_roundabout_gt_skill' --learning_rate 0.001 --KL_weight 1 --scenario 'roundabout'

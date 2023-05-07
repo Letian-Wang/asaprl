@@ -1,0 +1,30 @@
+# ASAP (ours)
+python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_PretrainActor_PretrainCritic_fixed10_RV215_lat5_intersection_seed1' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_intersection --critic_pretraining True --CRITIC_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/critic_intersection.pth.tar
+python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_PretrainActor_PretrainCritic_fixed10_RV215_lat5_intersection_seed2' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_intersection --critic_pretraining True --CRITIC_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/critic_intersection.pth.tar
+python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_PretrainActor_PretrainCritic_fixed10_RV215_lat5_intersection_seed3' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_intersection --critic_pretraining True --CRITIC_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/critic_intersection.pth.tar
+
+# SPIRL
+python src/training/intersection/skill.py --exp_name 'saved_model/SPIRL_fixed10_RV215_intersection_seed1' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --reward_version 215 --DECODER_LOAD_DIR 'pretrain_ckpt_files/SPIRL_network/decoder_ckpt_intersection' --pretraining True --pretraining_iter 0 --prior_kl True --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/SPIRL_network/actor_ckpt_intersection
+python src/training/intersection/skill.py --exp_name 'saved_model/SPIRL_fixed10_RV215_intersection_seed2' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --reward_version 215 --DECODER_LOAD_DIR 'pretrain_ckpt_files/SPIRL_network/decoder_ckpt_intersection' --pretraining True --pretraining_iter 0 --prior_kl True --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/SPIRL_network/actor_ckpt_intersection
+python src/training/intersection/skill.py --exp_name 'saved_model/SPIRL_fixed10_RV215_intersection_seed3' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --reward_version 215 --DECODER_LOAD_DIR 'pretrain_ckpt_files/SPIRL_network/decoder_ckpt_intersection' --pretraining True --pretraining_iter 0 --prior_kl True --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/SPIRL_network/actor_ckpt_intersection
+
+# taecrl intersection
+python src/training/intersection/skill.py --exp_name 'saved_model/taecrl_RV215_intersection_seed1' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --DECODER_LOAD_DIR 'pretrain_ckpt_files/taecrl_network/99_decoder_ckpt_len10_dim5' --reward_version 215
+python src/training/intersection/skill.py --exp_name 'saved_model/taecrl_RV215_intersection_seed2' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --DECODER_LOAD_DIR 'pretrain_ckpt_files/taecrl_network/99_decoder_ckpt_len10_dim5' --reward_version 215
+python src/training/intersection/skill.py --exp_name 'saved_model/taecrl_RV215_intersection_seed3' --traj_mode 'decoder' --action_shape 5 --SEQ_TRAJ_LEN 10 --DECODER_LOAD_DIR 'pretrain_ckpt_files/taecrl_network/99_decoder_ckpt_len10_dim5' --reward_version 215
+
+# constant sac
+python src/training/intersection/const_sac.py --exp_name 'saved_model/const_sac_rv215_inter_sparse_seed1'
+python src/training/intersection/const_sac.py --exp_name 'saved_model/const_sac_rv215_inter_sparse_seed2'
+python src/training/intersection/const_sac.py --exp_name 'saved_model/const_sac_rv215_inter_sparse_seed3'
+
+# ppo
+python src/training/intersection/ppo.py --exp_name 'saved_model/ppo_inter_RV215_sparse_seed1'
+python src/training/intersection/ppo.py --exp_name 'saved_model/ppo_inter_RV215_sparse_seed2'
+python src/training/intersection/ppo.py --exp_name 'saved_model/ppo_inter_RV215_sparse_seed3'
+
+# sac
+python src/training/intersection/sac.py --exp_name 'saved_model/sac_inter_RV215_sparse_seed1'
+python src/training/intersection/sac.py --exp_name 'saved_model/sac_inter_RV215_sparse_seed2'
+python src/training/intersection/sac.py --exp_name 'saved_model/sac_inter_RV215_sparse_seed3'
+       

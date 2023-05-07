@@ -1,0 +1,44 @@
+# ASAP no prior
+    # highway
+        python src/training/highway/skill.py --exp_name 'saved_model/ASPA_NoPrior_fixed10_RV27_lat5_highway_seed1' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
+        python src/training/highway/skill.py --exp_name 'saved_model/ASPA_NoPrior_fixed10_RV27_lat5_highway_seed2' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
+        python src/training/highway/skill.py --exp_name 'saved_model/ASPA_NoPrior_fixed10_RV27_lat5_highway_seed3' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
+    # intersection
+        python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV215_lat5_intersection_seed1' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5
+        python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV215_lat5_intersection_seed2' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5
+        python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_NoPrior_fixed10_RV215_lat5_intersection_seed3' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5
+    # roundabout
+        python src/training/roundabout/skill.py --exp_name 'saved_model/ASPA_NoPrior_fixed10_RV27_lat5_roundabout_seed1' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
+        python src/training/roundabout/skill.py --exp_name 'saved_model/ASPA_NoPrior_fixed10_RV27_lat5_roundabout_seed2' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
+        python src/training/roundabout/skill.py --exp_name 'saved_model/ASPA_NoPrior_fixed10_RV27_lat5_roundabout_seed3' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
+
+
+# ASAP actor prior
+    # highway
+        python src/training/highway/skill.py --exp_name 'saved_model/ASAP_PretrainActor_fixed10_RV27_lat5_highway_seed1' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_highway
+        python src/training/highway/skill.py --exp_name 'saved_model/ASAP_PretrainActor_fixed10_RV27_lat5_highway_seed2' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_highway
+        python src/training/highway/skill.py --exp_name 'saved_model/ASAP_PretrainActor_fixed10_RV27_lat5_highway_seed3' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_highway
+    # intersection
+        python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_PretrainActor_fixed10_RV215_lat5_intersection_seed1' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_intersection
+        python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_PretrainActor_fixed10_RV215_lat5_intersection_seed2' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_intersection
+        python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_PretrainActor_fixed10_RV215_lat5_intersection_seed3' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_intersection
+    # roundabout
+        python src/training/roundabout/skill.py --exp_name 'saved_model/ASAP_PretrainActor_fixed10_RV27_lat5_roundabout_seed1' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_roundabout
+        python src/training/roundabout/skill.py --exp_name 'saved_model/ASAP_PretrainActor_fixed10_RV27_lat5_roundabout_seed2' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_roundabout
+        python src/training/roundabout/skill.py --exp_name 'saved_model/ASAP_PretrainActor_fixed10_RV27_lat5_roundabout_seed3' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_roundabout
+
+
+# ASAP actor prior + kl
+    # highway
+        python src/training/highway/skill.py --exp_name 'saved_model/ASAP_PretrainActor+KL_fixed10_RV27_lat5_highway_seed1' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_highway --prior_kl True
+        python src/training/highway/skill.py --exp_name 'saved_model/ASAP_PretrainActor+KL_fixed10_RV27_lat5_highway_seed2' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_highway --prior_kl True
+        python src/training/highway/skill.py --exp_name 'saved_model/ASAP_PretrainActor+KL_fixed10_RV27_lat5_highway_seed3' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_highway --prior_kl True
+    # intersection
+        python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_PretrainActor+KL_fixed10_RV215_lat5_intersection_seed1' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_intersection --prior_kl True
+        python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_PretrainActor+KL_fixed10_RV215_lat5_intersection_seed2' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_intersection --prior_kl True
+        python src/training/intersection/skill.py --exp_name 'saved_model/ASAP_PretrainActor+KL_fixed10_RV215_lat5_intersection_seed3' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 215 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_intersection --prior_kl True
+    # roundabout
+        python src/training/roundabout/skill.py --exp_name 'saved_model/ASAP_PretrainActor+KL_fixed10_RV27_lat5_roundabout_seed1' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_roundabout --prior_kl True
+        python src/training/roundabout/skill.py --exp_name 'saved_model/ASAP_PretrainActor+KL_fixed10_RV27_lat5_roundabout_seed2' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_roundabout --prior_kl True
+        python src/training/roundabout/skill.py --exp_name 'saved_model/ASAP_PretrainActor+KL_fixed10_RV27_lat5_roundabout_seed3' --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5 --pretraining True --pretraining_iter 0 --ACTOR_PRIOR_LOAD_DIR pretrain_ckpt_files/asaprl_network_RL_expert_prior/actor_ckpt_roundabout --prior_kl True
+
