@@ -1,8 +1,8 @@
-# Efficient Reinforcement Learning for Autonomous Driving with Parameterized Skills and Priors, [RSS 2023](http://arxiv.org/abs/2305.04412)
+# Efficient Reinforcement Learning for Autonomous Driving with Parameterized Skills and Priors
 ![pipeline](assets/method.png)
 > [Letian Wang](https://letianwang0.wixsite.com/myhome), Jie Liu, Hao Shao, [Wenshuo Wang](https://wenshuowang.github.io/), Ruobing Chen, [Yu Liu](https://liuyu.us/), [Steven L. Waslander](https://www.trailab.utias.utoronto.ca/stevenwaslander)
 
-This repository contains code for the paper [Efficient Reinforcement Learning for Autonomous Driving with Parameterized Skills and Priors](http://arxiv.org/abs/2305.04412), which is accpeted by RSS 2023.
+This repository contains code for the paper [Efficient Reinforcement Learning for Autonomous Driving with Parameterized Skills and Priors](http://arxiv.org/abs/2305.04412), which is accpeted by [RSS 2023](https://rss2023.github.io/rss2023-website/).
 
 This work presents an efficient reinforcement learning (ASAP-RL) that simultaneously leverages parameterized motion skills and expert priors for autonomous vehicles to navigate in complex dense traffic. This work first introduce parameterized motion skills and enable RL agents to learn over the skill parameter space instead of the control space. To further leverage expert priors on top of skills, this work then proposes an inverse skill parameter recovery method to convert expert demonstrations from control space to skill space. A simple but effective double initialization method is also proposed to better leverage expert priors. Validations on three challenging dense-traffic driving scenarios with sparse reward settings demonstrate that the proposed ASAP-RL significantly outperforms previous methods in terms of learning efficiency and performance. Code is here open-sourced to faccilitate further research, with pretrained model and trained model attached.
 
