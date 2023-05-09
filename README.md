@@ -1,7 +1,6 @@
-# Efficient Reinforcement Learning for Autonomous Driving with Parameterized Skills and Priors
+# Efficient Reinforcement Learning for Autonomous Driving with Parameterized Skills and Priors, [RSS 2023](http://arxiv.org/abs/2305.04412)
 ![pipeline](assets/method.png)
-> Letian Wang, Jie Liu, Hao Shao, Wenshuo Wang, RuoBing Chen, Yu Liu, Steven L. Waslander
-> [RSS 2023](http://arxiv.org/abs/2305.04412)
+> [Letian Wang](https://letianwang0.wixsite.com/myhome), Jie Liu, Hao Shao, [Wenshuo Wang](https://wenshuowang.github.io/), Ruobing Chen, [Yu Liu](https://liuyu.us/), [Steven L. Waslander](https://www.trailab.utias.utoronto.ca/stevenwaslander)
 
 This repository contains code for the paper [Efficient Reinforcement Learning for Autonomous Driving with Parameterized Skills and Priors](http://arxiv.org/abs/2305.04412), which is accpeted by RSS 2023.
 
