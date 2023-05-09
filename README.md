@@ -34,10 +34,10 @@ If you find our repo or paper useful, please cite our work as:
 # Contents
 1. [Setup](#setup)
 2. [RL Training](#RL-Training)
-3. [visualization and evaluation](#visualization-and-evaluation)
-4. [expert data collection](#expert-data-collection)
-5. [expert skill parameter recovery](#expert-skill-parameter-recovery)
-6. [Actor and critic pretraining](#Actor-and-critic-pretraining)
+3. [Visualization and Evaluation](#visualization-and-evaluation)
+4. [Expert Data Collection](#expert-data-collection)
+5. [Expert Skill Parameter Recovery](#expert-skill-parameter-recovery)
+6. [Actor and Critic Pretraining](#Actor-and-critic-pretraining)
 
 # Setup
 Install anaconda
@@ -50,10 +50,11 @@ source ~/.profile
 Clone the repo and build the environment
 
 ```Shell
+git clone https://github.com/Letian-Wang/asaprl.git
 conda create -n asaprl python=3.7
 conda activate asaprl
+cd asaprl
 pip install -r requirements.txt
-cd ASAPRL
 pip install . 
 ```
 
