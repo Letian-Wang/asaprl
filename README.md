@@ -5,7 +5,7 @@
 
 This repository contains code for the paper [Efficient Reinforcement Learning for Autonomous Driving with Parameterized Skills and Priors](http://arxiv.org/abs/2305.04412), which is accpeted by RSS 2023.
 
-This work presents an efficient reinforcement learning (ASAP-RL) that simultaneously leverages parameterized motion skills and expert priors for autonomous vehicles to navigate in complex dense traffic. This work first introduce parameterized motion skills and enable RL agents to learn over the skill parameter space instead of the control space. To further leverage expert priors on top of skills, this work then proposes an inverse skill parameter recovery technique to convert expert demonstrations from control space to skill space. A simple but effective double initialization technique to better leverage expert priors. Validations on three challenging dense-traffic driving scenarios demonstrate that the proposed ASAP-RL significantly outperforms previous methods in terms of learning efficiency and performance.
+This work presents an efficient reinforcement learning (ASAP-RL) that simultaneously leverages parameterized motion skills and expert priors for autonomous vehicles to navigate in complex dense traffic. This work first introduce parameterized motion skills and enable RL agents to learn over the skill parameter space instead of the control space. To further leverage expert priors on top of skills, this work then proposes an inverse skill parameter recovery method to convert expert demonstrations from control space to skill space. A simple but effective double initialization method is also proposed to better leverage expert priors. Validations on three challenging dense-traffic driving scenarios with sparse reward settings demonstrate that the proposed ASAP-RL significantly outperforms previous methods in terms of learning efficiency and performance. Code is here open-sourced to faccilitate further research, with pretrained model and trained model attached.
 
 This repo also includes code for compared baselines in the paper (SAC, PPO, Constant SAC), and methods in paper [Accelerating Reinforcement Learning for Autonomous Driving using Task-Agnostic and Ego-Centric Motion Skills](https://arxiv.org/abs/2209.12072), and [Accelerating Reinforcement Learning with Learned Skill Priors](https://arxiv.org/abs/2010.11944).
 
@@ -29,7 +29,7 @@ If you find our repo or paper useful, please cite our work as:
 ```
 
 # Demo Video
-<img src="assets/demo.gif" height="500">
+<img src="assets/demo.gif" height="400">
 
 
 # Contents
@@ -70,11 +70,11 @@ See the training commands in the directory ```launch_command/training_commands``
 
 The training logs will be stored at ```log```. The ckpt and training configures for each experiment with ```experiment_name```  will be saved at ```/saved_model/experiment_name```. The pretrained 
 
-Note that the experiments in the paper are run on powerful servers, where we are able to conduct asynchronous parallel data collection. Specifically, for each experiment we typically launch 12 simulation environments for collection, and 2 simulation environments for evaluation, and we also set a large replay buffer size and data collection each time, where a memory of around 150G is used to store the replay buffer. In the code provided, we reduced the relavant parameters to avoid computer freeze for first users with limited resources. If you are reproducing the results in the paper, you will need to increase the environment number, replay buffer size, and data collection size by modifying the parameter ```n_evaluator_episode```, ```collector_env_num```, ```evaluator_env_num```, ```replay_buffer_size```, ```n_sample``` in the launched python file. The original parameters used in our experiments are commented on at the end of the corresponding parameter line.
+Note that the experiments in the paper are run on powerful servers, where we are able to conduct asynchronous parallel data collection. Specifically, for each experiment we typically launch 12 simulation environments for collection, and 2 simulation environments for evaluation, and we also set a large replay buffer size and data collection size, where a memory of around 150G is used to store the replay buffer. In the code provided, we reduced the relavant parameters to avoid computer freeze for users with limited resources. If you are reproducing the results in the paper, you will need to increase the environment number, replay buffer size, and data collection size by modifying the parameter ```n_evaluator_episode```, ```collector_env_num```, ```evaluator_env_num```, ```replay_buffer_size```, ```n_sample``` in the launched python file. The original parameters used in our experiments are commented on at the end of the corresponding parameter line.
 
-We will soon release the pretrained models needed for some methods (SPiRL, TaEcRL, and our full-version ASAP-RL), and some of the trained model. But for our ASAP-RL, you are still able to run the no-prior version with the current code. We'll update the pretrained models in the directory of ```pretrain_ckpt_files```.
+You can find the pretrained models needed for SPiRL, TaEcRL, and our ASAP-RL [here](https://drive.google.com/file/d/1mFbQ1Oie3oUe-yo67DcV2WCZ4PraK5C9/view?usp=share_link). You will need to uncompress it and put it in the main directory. Note for our ASAP-RL, you are still able to run the without these pretrained models.
 
-# visualization and evaluation
+# Visualization and evaluation
 See the commands in the directory ```launch_command/eval_commands``` to visualize or evaluate the trained agent. The directory indluces files below:
 1. highway: commands to evaluate/visualize trained agent on the highway scenario
 2. intersection: commands to evaluate/visualize trained agent on the intersection scenario
@@ -86,14 +86,15 @@ Note that you will need to modify the argparse parameter ```exp_name``` and ```c
 
 The files in ```src/training``` are used for training and ```src/evaluation``` are used for evaluation. Files in these two directories are basically similar, except for the fact that 1) files in ```src/evaluation``` will turn on the MetaDrive rendering by setting the config parameter ```use_render``` as on; 2) files in ```src/evaluation``` only includes the evaluator, without the collector and learner. 3) files in ```src/evaluation``` requires you to specify the ```ckpt_file```
 
+For direct evaluation and visualization, you can find examplery trained model of our ASAP-RL [here](https://drive.google.com/file/d/10GXOnn4ti8Dd9T4tUC0Ty-aTZ8LrxkTK/view?usp=share_link). You will need to uncompress it and put it in the main directory. Note that these models are trained with sparse reward, and dense reward setting (also provided in our code base) can further improve the performance.
 
-# expert data collection
+# Expert data collection
 See the commands in the directory ```launch_command/data_collection_commands``` to collect data. The directory indluces files below:
 1. rl_agent: collect data with trained RL agent on three scenarios. Specifically, the RL agent we used is the 'No Prior' version of our method, since it has higher performance than typical RL method such as SAC/PPO. The collected data will be stored at ```demonstration_RL_expert/scenario/```.
 2. rule_expert_agent: collect data with hand-designed rule-based agent on three scenarios, collected data will be stored at ```demonstration_RL_expert/scenario/```
 
 
-# expert skill parameter recovery
+# Expert skill parameter recovery
 See the commands in the directory ```launch_command/skill_recovery_commands``` to recover skill parameters in the collected expert demonstrations. The directory indluces files below:
 1. skill recovery: read collected expert demonstration, recover skill parameters for the expert data, store the recovered data at  at ```demonstration_RL_expert/scenario_annotated/```
 
@@ -101,6 +102,4 @@ See the commands in the directory ```launch_command/skill_recovery_commands``` t
 # Actor and critic pretraining
 See the commands in the directory ```launch_command/prior_training``` to pretrain the actors. The directory indluces files below:
 1. actor_pretraining: pretrain the actor network with the expert data. Note that since the collected data has the ground-truth skill parameters, this 1) enable us to examine the accuracy of the recovered parameters; 2) train with both ground-truth skill parameters and recovered skill parameters, to tell their differences. The trained actor will be respectively saved in ```saved_model/pretrain_actor``` and ```saved_model/pretrain_actor_gt_skill```, for training with recovered and ground-truth skill parameters.
-2. critic_pretraining: pretrain the critic network, which consists of 1) roll-out the pretrained actor to collect demonstration with skill and reward information; 2) train the critic with the collected data. To simplify the codebase, we provide a convenient implementation for the critic pretraining by running the typical RL training by initializing the actor with pretrained weight. The trained model will be saved in ```saved_model/experiment_name```. Note that you will need to modify ```ACTOR_PRIOR_LOAD_DIR``` to specify the location of the pretrained actor.
-
-
+2. critic_pretraining: pretrain the critic network, which consists of 1) roll-out the pretrained actor to collect demonstration with skill and reward information; 2) train the critic with the collected data. To simplify the codebase, we provide a convenient implementation for the critic pretraining by running the typical RL training by initializing and freezing the actor with pretrained weight. The trained model will be saved in ```saved_model/experiment_name```. Note that you will need to modify ```ACTOR_PRIOR_LOAD_DIR``` to specify the location of the pretrained actor.

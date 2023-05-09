@@ -1,7 +1,3 @@
 python src/data_collection/highway/skill.py --exp_name 'saved_model/ASPA_NoPrior_fixed10_RV27_lat5_highway_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
 python src/data_collection/highway/skill.py --exp_name 'saved_model/ASPA_NoPrior_fixed10_RV27_lat5_highway_seed2' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
 python src/data_collection/roundabout/skill.py --exp_name 'saved_model/ASPA_NoPrior_fixed10_RV27_lat5_roundabout_seed1' --ckpt_file ckpt/iteration_50000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
-
-
-
-python src/data_collection/highway/skill.py --exp_name 'saved_model/taecrl++fixed10_1226_RV27_lat5_highway_PretrainRLSigma1_2000critic5000_seed1' --ckpt_file ckpt/iteration_70000.pth.tar --traj_mode 'planningfixed' --action_shape 3 --SEQ_TRAJ_LEN 10 --reward_version 27 --lat_range 5
