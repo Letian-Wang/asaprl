@@ -12,7 +12,7 @@ This repo also includes code for compared baselines in the paper (SAC, PPO, Cons
 If you find our repo or paper useful, please cite our work as:
 
 ```bibtex
-@misc{wang2023efficient,
+@artical{wang2023efficient,
     title={Efficient Reinforcement Learning for Autonomous Driving with Parameterized Skills and Priors}, 
     author={Letian Wang and Jie Liu and Hao Shao and Wenshuo Wang and Ruobing Chen and Yu Liu and Steven L. Waslander},
     journal={arXiv preprint arXiv:2305.04412},
