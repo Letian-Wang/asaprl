@@ -72,7 +72,7 @@ The training logs will be stored at ```log```. The ckpt and training configures 
 
 Note that the experiments in the paper are run on powerful servers, where we are able to conduct asynchronous parallel data collection. Specifically, for each experiment we typically launch 12 simulation environments for collection, and 2 simulation environments for evaluation, and we also set a large replay buffer size and data collection size, where a memory of around 150G is used to store the replay buffer. In the code provided, we reduced the relavant parameters to avoid computer freeze for users with limited resources. If you are reproducing the results in the paper, you will need to increase the environment number, replay buffer size, and data collection size by modifying the parameter ```n_evaluator_episode```, ```collector_env_num```, ```evaluator_env_num```, ```replay_buffer_size```, ```n_sample``` in the launched python file. The original parameters used in our experiments are commented on at the end of the corresponding parameter line.
 
-You can find the pretrained models needed for SPiRL, TaEcRL, and our ASAP-RL [here](https://drive.google.com/file/d/1mFbQ1Oie3oUe-yo67DcV2WCZ4PraK5C9/view?usp=share_link). You will need to uncompress it and put it in the main directory. Note for our ASAP-RL, you are still able to run the without these pretrained models.
+You can find the pretrained models needed for SPiRL, TaEcRL, and our ASAP-RL [here](https://drive.google.com/file/d/1mFbQ1Oie3oUe-yo67DcV2WCZ4PraK5C9/view). You will need to uncompress it and put it in the main directory. Note for our ASAP-RL, you are still able to run the without these pretrained models.
 
 # Visualization and evaluation
 See the commands in the directory ```launch_command/eval_commands``` to visualize or evaluate the trained agent. The directory indluces files below:
@@ -86,7 +86,7 @@ Note that you will need to modify the argparse parameter ```exp_name``` and ```c
 
 The files in ```src/training``` are used for training and ```src/evaluation``` are used for evaluation. Files in these two directories are basically similar, except for the fact that 1) files in ```src/evaluation``` will turn on the MetaDrive rendering by setting the config parameter ```use_render``` as on; 2) files in ```src/evaluation``` only includes the evaluator, without the collector and learner. 3) files in ```src/evaluation``` requires you to specify the ```ckpt_file```
 
-For direct evaluation and visualization, you can find examplery trained model of our ASAP-RL [here](https://drive.google.com/file/d/10GXOnn4ti8Dd9T4tUC0Ty-aTZ8LrxkTK/view?usp=share_link). You will need to uncompress it and put it in the main directory. Note that these models are trained with sparse reward, and dense reward setting (also provided in our code base) can further improve the performance.
+For direct evaluation and visualization, you can find examplery trained model of our ASAP-RL [here](https://drive.google.com/file/d/10GXOnn4ti8Dd9T4tUC0Ty-aTZ8LrxkTK/view). You will need to uncompress it and put it in the main directory. Note that these models are trained with sparse reward, and dense reward setting (also provided in our code base) can further improve the performance.
 
 # Expert data collection
 See the commands in the directory ```launch_command/data_collection_commands``` to collect data. The directory indluces files below:
